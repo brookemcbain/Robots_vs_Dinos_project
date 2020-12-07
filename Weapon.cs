@@ -6,5 +6,12 @@ namespace RobotsVsDinosaurs
 {
     class Weapon
     {
+        public string type;
+        public int attackPower;
+
+        public Weapon()
+        {
+
+        }
     }
 }
