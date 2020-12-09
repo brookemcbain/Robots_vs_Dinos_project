@@ -19,7 +19,8 @@ namespace RobotsVsDinosaurs
 
         public Battlefield()
         {
-        
+            
+            Attack(); 
         }
         public void Attack() 
         {
