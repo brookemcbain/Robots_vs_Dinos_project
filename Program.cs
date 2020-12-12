@@ -20,7 +20,10 @@ namespace RobotsVsDinosaurs
             }
             else
             {
-                Console.WriteLine("You chose Robots"); 
+                Console.WriteLine("You chose Robots");
+                Battlefield battlefield = new Battlefield();
+                battlefield.Attack(); 
+              
             }
           
            

@@ -19,24 +19,26 @@ namespace RobotsVsDinosaurs
 
         public Battlefield()
         {
-            
-            Attack(); 
+
+            AttackDinoOne();
+            AttackDinoTwo();
+            AttackDinoThree();
         }
-        public void Attack() 
+        public void AttackDinoOne()
         {
             if (dinoOne.name.Equals("T-Rex") && robotOne.name.Equals("Robot One"))
             {
                 dinoOne.energy -= 1;
                 dinoOne.health -= 6;
                 robotOne.powerLevel -= 1;
-                robotOne.health -= 5; 
+                robotOne.health -= 5;
 
-                if(dinoOne.energy == 0 || dinoOne.health == 0 || robotOne.powerLevel == 0 || robotOne.health == 0)
+                if (dinoOne.energy == 0 || dinoOne.health == 0 || robotOne.powerLevel == 0 || robotOne.health == 0)
                 {
-                    if(dinoOne.health > robotOne.health)
+                    if (dinoOne.health > robotOne.health)
                     {
-                        Console.WriteLine( dinoOne.name + "is the winner!"); 
-                        
+                        Console.WriteLine(dinoOne.name + "is the winner!");
+
                     }
                     else
                     {
@@ -85,137 +87,146 @@ namespace RobotsVsDinosaurs
                         Console.WriteLine(robotThree.name + "is the winner!");
                     }
                 }
-
             }
-            else if (dinoTwo.name.Equals("Velociraptor") && robotTwo.name.Equals("Robot One"))
+            public void AttackDinoTwo()
             {
-                dinoTwo.energy -= 1;
-                dinoTwo.health -= 6;
-                robotOne.powerLevel -= 1;
-                robotOne.health -= 5;
-
-                if (dinoTwo.energy == 0 || dinoTwo.health == 0 || robotOne.powerLevel == 0 || robotOne.health == 0)
+                if (dinoTwo.name.Equals("Velociraptor") && robotTwo.name.Equals("Robot One"))
                 {
-                    if (dinoTwo.health > robotOne.health)
+                    dinoTwo.energy -= 1;
+                    dinoTwo.health -= 6;
+                    robotOne.powerLevel -= 1;
+                    robotOne.health -= 5;
+
+                    if (dinoTwo.energy == 0 || dinoTwo.health == 0 || robotOne.powerLevel == 0 || robotOne.health == 0)
                     {
-                        Console.WriteLine(dinoTwo.name + "is the winner!");
+                        if (dinoTwo.health > robotOne.health)
+                        {
+                            Console.WriteLine(dinoTwo.name + "is the winner!");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine(robotOne.name + "is the winner!");
+                        }
+                    }
+
+                }
+                else if (dinoTwo.name.Equals("Velociraptor") && robotTwo.name.Equals("Robot Two"))
+                {
+                    dinoTwo.energy -= 1;
+                    dinoTwo.health -= 6;
+                    robotTwo.powerLevel -= 1;
+                    robotTwo.health -= 5;
+
+                    if (dinoTwo.energy == 0 || dinoTwo.health == 0 || robotTwo.powerLevel == 0 || robotTwo.health == 0)
+                    {
+                        if (dinoTwo.health > robotTwo.health)
+                        {
+                            Console.WriteLine(dinoTwo.name + "is the winner!");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine(robotTwo.name + "is the winner!");
+                        }
+                    }
+
+                }
+                else if (dinoTwo.name.Equals("Velociraptor") && robotThree.name.Equals("Robot Three"))
+                {
+                    dinoTwo.energy -= 1;
+                    dinoTwo.health -= 6;
+                    robotThree.powerLevel -= 1;
+                    robotThree.health -= 5;
+
+                    if (dinoTwo.energy == 0 || dinoTwo.health == 0 || robotThree.powerLevel == 0 || robotThree.health == 0)
+                    {
+                        if (dinoTwo.health > robotThree.health)
+                        {
+                            Console.WriteLine(dinoTwo.name + "is the winner!");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine(robotThree.name + "is the winner!");
+                        }
+                    }
+
+
+                }
+                public void AttackDinoThree()
+                {
+                    if (dinoThree.name.Equals("Stegasaurus") && robotOne.name.Equals("Robot One"))
+                    {
+                        dinoThree.energy -= 1;
+                        dinoThree.health -= 6;
+                        robotOne.powerLevel -= 1;
+                        robotOne.health -= 5;
+
+                        if (dinoThree.energy == 0 || dinoThree.health == 0 || robotOne.powerLevel == 0 || robotOne.health == 0)
+                        {
+                            if (dinoThree.health > robotOne.health)
+                            {
+                                Console.WriteLine(dinoThree.name + "is the winner!");
+
+                            }
+                            else
+                            {
+                                Console.WriteLine(robotOne.name + "is the winner!");
+                            }
+                        }
 
                     }
-                    else
+                    else if (dinoThree.name.Equals("Stegasaurus") && robotTwo.name.Equals("Robot Two"))
                     {
-                        Console.WriteLine(robotOne.name + "is the winner!");
+                        dinoThree.energy -= 1;
+                        dinoThree.health -= 6;
+                        robotTwo.powerLevel -= 1;
+                        robotTwo.health -= 5;
+
+                        if (dinoThree.energy == 0 || dinoThree.health == 0 || robotTwo.powerLevel == 0 || robotTwo.health == 0)
+                        {
+                            if (dinoThree.health > robotTwo.health)
+                            {
+                                Console.WriteLine(dinoThree.name + "is the winner!");
+
+                            }
+                            else
+                            {
+                                Console.WriteLine(robotTwo.name + "is the winner!");
+                            }
+                        }
+
                     }
+                    else if (dinoThree.name.Equals("Stegasaurus") && robotThree.name.Equals("Robot Three"))
+                    {
+                        dinoThree.energy -= 1;
+                        dinoThree.health -= 6;
+                        robotThree.powerLevel -= 1;
+                        robotThree.health -= 5;
+
+                        if (dinoThree.energy == 0 || dinoThree.health == 0 || robotThree.powerLevel == 0 || robotThree.health == 0)
+                        {
+                            if (dinoThree.health > robotThree.health)
+                            {
+                                Console.WriteLine(dinoThree.name + "is the winner!");
+
+                            }
+                            else
+                            {
+                                Console.WriteLine(robotThree.name + "is the winner!");
+                            }
+                        }
+
+                    }
+
+
+
+
+
+
+
                 }
 
-            }
-            else if (dinoTwo.name.Equals("Velociraptor") && robotTwo.name.Equals("Robot Two"))
-            {
-                dinoTwo.energy -= 1;
-                dinoTwo.health -= 6;
-                robotTwo.powerLevel -= 1;
-                robotTwo.health -= 5;
-
-                if (dinoTwo.energy == 0 || dinoTwo.health == 0 || robotTwo.powerLevel == 0 || robotTwo.health == 0)
-                {
-                    if (dinoTwo.health > robotTwo.health)
-                    {
-                        Console.WriteLine(dinoTwo.name + "is the winner!");
-
-                    }
-                    else
-                    {
-                        Console.WriteLine(robotTwo.name + "is the winner!");
-                    }
-                }
 
             }
-            else if (dinoTwo.name.Equals("Velociraptor") && robotThree.name.Equals("Robot Three"))
-            {
-                dinoTwo.energy -= 1;
-                dinoTwo.health -= 6;
-                robotThree.powerLevel -= 1;
-                robotThree.health -= 5;
-
-                if (dinoTwo.energy == 0 || dinoTwo.health == 0 || robotThree.powerLevel == 0 || robotThree.health == 0)
-                {
-                    if (dinoTwo.health > robotThree.health)
-                    {
-                        Console.WriteLine(dinoTwo.name + "is the winner!");
-
-                    }
-                    else
-                    {
-                        Console.WriteLine(robotThree.name + "is the winner!");
-                    }
-                }
-
-            }
-            else if (dinoThree.name.Equals("Stegasaurus") && robotOne.name.Equals("Robot One"))
-            {
-                dinoThree.energy -= 1;
-                dinoThree.health -= 6;
-                robotOne.powerLevel -= 1;
-                robotOne.health -= 5;
-
-                if (dinoThree.energy == 0 || dinoThree.health == 0 || robotOne.powerLevel == 0 || robotOne.health == 0)
-                {
-                    if (dinoThree.health > robotOne.health)
-                    {
-                        Console.WriteLine(dinoThree.name + "is the winner!");
-
-                    }
-                    else
-                    {
-                        Console.WriteLine(robotOne.name + "is the winner!");
-                    }
-                }
-
-            }
-            else if (dinoThree.name.Equals("Stegasaurus") && robotTwo.name.Equals("Robot Two"))
-            {
-                dinoThree.energy -= 1;
-                dinoThree.health -= 6;
-                robotTwo.powerLevel -= 1;
-                robotTwo.health -= 5;
-
-                if (dinoThree.energy == 0 || dinoThree.health == 0 || robotTwo.powerLevel == 0 || robotTwo.health == 0)
-                {
-                    if (dinoThree.health > robotTwo.health)
-                    {
-                        Console.WriteLine(dinoThree.name + "is the winner!");
-
-                    }
-                    else
-                    {
-                        Console.WriteLine(robotTwo.name + "is the winner!");
-                    }
-                }
-
-            }
-            else if (dinoThree.name.Equals("Stegasaurus") && robotThree.name.Equals("Robot Three"))
-            {
-                dinoThree.energy -= 1;
-                dinoThree.health -= 6;
-                robotThree.powerLevel -= 1;
-                robotThree.health -= 5;
-
-                if (dinoThree.energy == 0 || dinoThree.health == 0 || robotThree.powerLevel == 0 || robotThree.health == 0)
-                {
-                    if (dinoThree.health > robotThree.health)
-                    {
-                        Console.WriteLine(dinoThree.name + "is the winner!");
-
-                    }
-                    else
-                    {
-                        Console.WriteLine(robotThree.name + "is the winner!");
-                    }
-                }
-
-            }
-
-
-        }
-
-    }
-}
