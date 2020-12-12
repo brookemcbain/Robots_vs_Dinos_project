@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace RobotsVsDinosaurs
 {
@@ -6,6 +7,8 @@ namespace RobotsVsDinosaurs
     {
         static void Main(string[] args)
         {
+            Main(); 
+
             static void Main()
             {
                 Console.WriteLine("Welcome to ROBOTS VS. DINOSAURS!");
@@ -16,30 +19,40 @@ namespace RobotsVsDinosaurs
                 if (answer == "1")
                 {
                     Console.WriteLine("You chose Dinosaurs!");
-                    Console.WriteLine("Which Dinosaur would you like to be?");
+                    Console.WriteLine("Which Dinosaur would you like to play first?");
                     Console.WriteLine("1) T-Rex");
                     Console.WriteLine("2) Velociraptor");
                     Console.WriteLine("3) Stegasaurus");
                     Battlefield battlefield = new Battlefield();
-                    string chosenDinosaur = Console.ReadLine(); 
-                    if(chosenDinosaur == "T-Rex")
-                    {
-                        battlefield.AttackDinoOne(); 
-                    }
-                    else if(chosenDinosaur == "Velociraptor")
-                    {
-                        battlefield.AttackDinoTwo(); 
-                    }
-                    else if(chosenDinosaur == "Stegasaurus")
-                    {
-                        battlefield.AttackDinoThree(); 
-                    }
-                    else
-                    {
-                        Console.WriteLine("Please enter a valid response");
-                        Main(); 
-                    }
                     
+                    while (battlefield.dinosaurs.Count > 0 || battlefield.robots.Count > 0)
+                    {
+                        string chosenDinosaur = Console.ReadLine(); 
+
+                        if (chosenDinosaur == "T-Rex")
+                        {
+                            battlefield.AttackDinoOne();
+                            Console.WriteLine("Which dinosaur would you like to play next?"); 
+
+                        }
+                        else if (chosenDinosaur == "Velociraptor")
+                        {
+                            battlefield.AttackDinoTwo();
+                            Console.WriteLine("WWhich dinosaur would you like to play next?"); 
+                        }
+                        else if (chosenDinosaur == "Stegasaurus")
+                        {
+                            battlefield.AttackDinoThree();
+                            Console.WriteLine("WWhich dinosaur would you like to play next?");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Please enter a valid response");
+                            Main();
+                        }
+
+                    }
+
                     Console.WriteLine("Would you like to play again?");
                     Console.WriteLine("Type 1 for YES, Type 2 for NO");
                     string answerTwo = Console.ReadLine();
@@ -56,7 +69,7 @@ namespace RobotsVsDinosaurs
                 {
                     Console.WriteLine("You chose Robots");
                     Battlefield battlefield = new Battlefield();
-                    battlefield.Attack();
+                    
 
                 }
 
