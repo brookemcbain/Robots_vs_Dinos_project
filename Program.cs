@@ -16,16 +16,40 @@ namespace RobotsVsDinosaurs
                 if (answer == "1")
                 {
                     Console.WriteLine("You chose Dinosaurs!");
-                    Console.WriteLine("Which Dinosaur would you like to be?"); 
-                    Console.WriteLine()
-                    Battlefield battlefield1 = new Battlefield();
-                    battlefield1.Attack();
+                    Console.WriteLine("Which Dinosaur would you like to be?");
+                    Console.WriteLine("1) T-Rex");
+                    Console.WriteLine("2) Velociraptor");
+                    Console.WriteLine("3) Stegasaurus");
+                    Battlefield battlefield = new Battlefield();
+                    string chosenDinosaur = Console.ReadLine(); 
+                    if(chosenDinosaur == "T-Rex")
+                    {
+                        battlefield.AttackDinoOne(); 
+                    }
+                    else if(chosenDinosaur == "Velociraptor")
+                    {
+                        battlefield.AttackDinoTwo(); 
+                    }
+                    else if(chosenDinosaur == "Stegasaurus")
+                    {
+                        battlefield.AttackDinoThree(); 
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please enter a valid response");
+                        Main(); 
+                    }
+                    
                     Console.WriteLine("Would you like to play again?");
                     Console.WriteLine("Type 1 for YES, Type 2 for NO");
                     string answerTwo = Console.ReadLine();
                     if (answer == "1")
                     {
                         Main();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Thanks for playing!"); 
                     }
                 }
                 else
