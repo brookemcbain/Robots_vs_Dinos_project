@@ -14,14 +14,16 @@ namespace RobotsVsDinosaurs
             string answer = Console.ReadLine();   
             if(answer == "1")
             {
-                Console.WriteLine("You chose Dinosuars"); 
+                Console.WriteLine("You chose Dinosaurs"); 
+                Battlefield battlefield1 = new Battlefield();
+                battlefield1.Attack(); 
             }
             else
             {
                 Console.WriteLine("You chose Robots"); 
             }
           
-            Battlefield battlefield = new Battlefield(); 
+           
         }
     }
 }
