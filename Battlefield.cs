@@ -106,7 +106,12 @@ namespace RobotsVsDinosaurs
         }
         public void AttackDinoTwo()
         {
-            if (dinoTwo.name.Equals("Velociraptor") && robotTwo.name.Equals("Robot One"))
+            Console.WriteLine("Dino Two loses 1 energy and 6 health");
+            Console.WriteLine("Robot One loses 1 energy and 5 health");
+            Console.WriteLine("Dino Two has" + dinoTwo.energy + "energy and" + dinoTwo.health + "health");
+            Console.WriteLine("Robot One has" + robotOne.powerLevel + "energy and" + robotOne.health + "health");
+
+            if (dinoTwo.name.Equals("Velociraptor") && robotOne.name.Equals("Robot One"))
             {
                 dinoTwo.energy -= 1;
                 dinoTwo.health -= 6;
@@ -129,6 +134,11 @@ namespace RobotsVsDinosaurs
             }
             else if (dinoTwo.name.Equals("Velociraptor") && robotTwo.name.Equals("Robot Two"))
             {
+                Console.WriteLine("Dino Two loses 1 energy and 6 health");
+                Console.WriteLine("Robot Two loses 1 energy and 5 health");
+                Console.WriteLine("Dino Two has" + dinoTwo.energy + "energy and" + dinoTwo.health + "health");
+                Console.WriteLine("Robot Two has" + robotTwo.powerLevel + "energy and" + robotTwo.health + "health");
+
                 dinoTwo.energy -= 1;
                 dinoTwo.health -= 6;
                 robotTwo.powerLevel -= 1;
@@ -150,6 +160,11 @@ namespace RobotsVsDinosaurs
             }
             else if (dinoTwo.name.Equals("Velociraptor") && robotThree.name.Equals("Robot Three"))
             {
+                Console.WriteLine("Dino Two loses 1 energy and 6 health");
+                Console.WriteLine("Robot Three loses 1 energy and 5 health");
+                Console.WriteLine("Dino Two has" + dinoTwo.energy + "energy and" + dinoTwo.health + "health");
+                Console.WriteLine("Robot Three has" + robotThree.powerLevel + "energy and" + robotThree.health + "health");
+
                 dinoTwo.energy -= 1;
                 dinoTwo.health -= 6;
                 robotThree.powerLevel -= 1;
@@ -173,29 +188,40 @@ namespace RobotsVsDinosaurs
         }
         public void AttackDinoThree()
         {
+          
             if (dinoThree.name.Equals("Stegasaurus") && robotOne.name.Equals("Robot One"))
             {
+                Console.WriteLine("Dino Three loses 1 energy and 6 health");
+                Console.WriteLine("Robot One loses 1 energy and 5 health");
+                Console.WriteLine("Dino Three has" + dinoThree.energy + "energy and" + dinoThree.health + "health");
+                Console.WriteLine("Robot One has" + robotOne.powerLevel + "energy and" + robotOne.health + "health");
+
                 dinoThree.energy -= 1;
                 dinoThree.health -= 6;
                 robotOne.powerLevel -= 1;
                 robotOne.health -= 5;
-            }
-            else if (dinoThree.energy == 0 || dinoThree.health == 0 || robotOne.powerLevel == 0 || robotOne.health == 0)
-            {
-                if (dinoThree.health > robotOne.health)
+
+                if (dinoThree.energy == 0 || dinoThree.health == 0 || robotOne.powerLevel == 0 || robotOne.health == 0)
                 {
-                    Console.WriteLine(dinoThree.name + "is the winner!");
+                    if (dinoThree.health > robotOne.health)
+                    {
+                        Console.WriteLine(dinoThree.name + "is the winner!");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(robotOne.name + "is the winner!");
+                    }
 
                 }
-                else
-                {
-                    Console.WriteLine(robotOne.name + "is the winner!");
-                }
-
-
             }
             else if (dinoThree.name.Equals("Stegasaurus") && robotTwo.name.Equals("Robot Two"))
             {
+                Console.WriteLine("Dino Three loses 1 energy and 6 health");
+                Console.WriteLine("Robot Two loses 1 energy and 5 health");
+                Console.WriteLine("Dino Three has" + dinoThree.energy + "energy and" + dinoThree.health + "health");
+                Console.WriteLine("Robot Two has" + robotTwo.powerLevel + "energy and" + robotTwo.health + "health");
+
                 dinoThree.energy -= 1;
                 dinoThree.health -= 6;
                 robotTwo.powerLevel -= 1;
@@ -217,6 +243,11 @@ namespace RobotsVsDinosaurs
             }
             else if (dinoThree.name.Equals("Stegasaurus") && robotThree.name.Equals("Robot Three"))
             {
+                Console.WriteLine("Dino Three loses 1 energy and 6 health");
+                Console.WriteLine("Robot Three loses 1 energy and 5 health");
+                Console.WriteLine("Dino Three has" + dinoThree.energy + "energy and" + dinoThree.health + "health");
+                Console.WriteLine("Robot Three has" + robotThree.powerLevel + "energy and" + robotThree.health + "health");
+
                 dinoThree.energy -= 1;
                 dinoThree.health -= 6;
                 robotThree.powerLevel -= 1;
